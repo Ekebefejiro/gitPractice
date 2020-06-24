@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quiz</title><link rel="stylesheet" type="text/css" href="Resource/css/quizstyle.css">
+</head>
+<body><h1>Mathematics quiz</h1><hr><p><b><i>Tick the correct answer.<br>All questions carry equal marks</i></b></p>
+	<form name="myform"><div class="wrapper">
+		<div class="flex-item">
+		Q1.what is the product of -40 and -10?<br>
+		<input type="radio" name="Q1" value="a">-400<br>
+		<input type="radio" name="Q1" value="b">400<br><br>
+
+		Q2.what is the sum of -40 and -10?<br>
+		<input type="radio" name="Q2" value="a">-50<br>
+		<input type="radio" name="Q2" value="b">-30<br><br>
+
+		Q3.what is the sum of -50 and -2?<br>
+		<input type="radio" name="Q3" value="a">-44<br>
+		<input type="radio" name="Q3" value="b">-52<br><br>
+
+        Q4.what percentage of 50 is 5?<br>
+       <input type="radio" name="Q4" value="a">10%<br>
+	   <input type="radio" name="Q4" value="b">50%<br><br>
+
+        Q5.what is the difference between -40 and -10?<br>
+        <input type="radio" name="Q5" value="a">30<br>
+	    <input type="radio" name="Q5" value="b">-30<br><br>
+	</div>
+
+        <div class="flex-item">
+        Q6.what is the product of -8/21 and -3?<br>
+	    <input type="radio" name="Q6" value="a">8/7<br>
+	    <input type="radio" name="Q6" value="b">-3/21<br><br>
+
+        Q7.what is the area of a square with side 20m?<br>
+	    <input type="radio" name="Q7" value="a">40m^2<br>
+	    <input type="radio" name="Q7" value="b">400m^2<br><br>
+
+        Q8.what is the sum of 4.30 and 10.5?<br>
+	    <input type="radio" name="Q8" value="a">50.8<br>
+	    <input type="radio" name="Q8" value="b">14.8<br><br> 
+
+        Q9.i am 10yrs old, 2yrs ago, my brother was half my age.<br>How old is he now?<br>
+	    <input type="radio" name="Q9" value="a">6yrs<br>
+	    <input type="radio" name="Q9" value="b">4yrs<br><br>
+
+        Q10.what is 30% of 40?<br>
+	    <input type="radio" name="Q10" value="a">12<br>
+	    <input type="radio" name="Q10" value="b">21<br><br>
+	  </div>
+	  </div>
+	  <input type="button" value ="Submit" onclick="check()">
+	  <button onclick="window.location='' ">Try again </button>   
+	</form>
+	<script type="text/javascript">
+	function check(){
+		var Q1=document.myform.Q1.value
+		var Q2=document.myform.Q2.value
+		var Q3=document.myform.Q3.value
+		var Q4=document.myform.Q4.value
+		var Q5=document.myform.Q5.value
+		var Q6=document.myform.Q6.value
+		var Q7=document.myform.Q7.value
+		var Q8=document.myform.Q8.value
+		var Q9=document.myform.Q9.value
+		var Q10=document.myform.Q10.value
+		var result=0;
+		var failed="";
+        if (Q1=="b") {
+.        	result+=10;
+        	}else{
+        	failed+="Q1,";
+        }
+        if (Q2=="a") {
+        	result+=10;
+        }else{
+        	failed+="Q2,";
+        }
+        if (Q3=="b") {
+           result+=10;
+        }else{
+        	failed+="Q3,";
+        }
+        if (Q4=="a") {
+        	result+=10;
+        }else{
+        	failed+="Q4,";
+        }
+        if (Q5=="b") {
+        	result+=10
+        }else{
+        	failed+="Q5,";
+        }
+        if (Q6=="a") {
+			result+=10;
+		}else{
+        	failed+="Q6,";
+        }
+		if (Q7=="b") {
+			result+=10;
+		}else{
+        	failed+="Q7,";
+        }
+		if (Q8=="b") {
+			result+=10;
+		}else{
+        	failed+="Q8,";
+        }
+		if (Q9=="a") {
+			result+=10;
+		}else{
+        	failed+="Q9,";
+        }
+		if (Q10=="a") {
+			result+=10;
+		}else{
+        	failed+="Q10,";
+        }
+		alert("You got "+""+ result +"%"+""+ " and you missed "+ failed);
+	}
+</script>
+</body>
+</html>
